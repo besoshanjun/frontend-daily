@@ -1,24 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Overlay from "./overlay";
+import Shuffle from "./shuffle";
+import Refs from './forward_refs';
+import ClassComponent from './class'
+
+function ExampleModal() {
+  console.log("render ExampleModal: ");
+  return (
+    <div className="App-link" target="_blank" rel="noopener noreferrer">
+      <Overlay.Closer>X</Overlay.Closer>
+      content
+    </div>
+  );
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="placeholder"></div>
+      <Overlay
+        renderBody={() => {
+          return <ExampleModal />;
+        }}
+      >
+        <div className="opener">toggle</div>
+      </Overlay>
+      <Shuffle />
+
+      <Refs></Refs>
+      <ClassComponent app="APp" />
     </div>
   );
 }

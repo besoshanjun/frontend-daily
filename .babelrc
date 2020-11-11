@@ -1,0 +1,17 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      // {
+      //   "modules": "commonjs",
+      //   "useBuiltIns": "usage",
+      //   "corejs": 3
+      // }
+    ],
+    "react-app"
+  ],
+  "plugins": [
+    ["@babel/plugin-proposal-decorators", {"legacy": true}]
+  ],
+  "sourceMaps":"inline"
+}
