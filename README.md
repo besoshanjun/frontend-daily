@@ -9,6 +9,7 @@
   3. bind
   4. apply
   5. call
+  6. new
 
 
 ### demo
