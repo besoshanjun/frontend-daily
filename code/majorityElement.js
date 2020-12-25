@@ -116,5 +116,5 @@ function majorityElement2(nums) {
   return res;
 }
 
-// console.log("majorityElement2: ", majorityElement2([1,1,1,3,3,2,2,2]));
+console.log("majorityElement2: ", majorityElement2([1,1,1,3,3,2,2,2]));
 

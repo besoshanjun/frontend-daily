@@ -1,6 +1,6 @@
 // 快排实现
 
-let arr = [0, 12, 43, 45, 88, 1, 69]
+let arr = [0, 88, 69, 45, 12, 1, 43]
 
 //1.
 const quickSort = (array = []) => {
@@ -9,24 +9,21 @@ const quickSort = (array = []) => {
   }
 
   // 随机找到一个中间点
-  const pivot = array[Math.floor(Math.random() * array.length)];
+  const pivot = array.splice([Math.floor(Math.random() * array.length)], 1);
 
   let leftArry = [];
   let rightArry = [];
-  let middleArry = [];
   
   for (let index = 0; index < array.length; index++) {
     const currentItem = array[index];
-    if (currentItem < pivot) {
+    if (currentItem <= pivot) {
       leftArry.push(currentItem);
-    } else if(currentItem === pivot){
-      middleArry.push(currentItem)
-    } else {
+    }else {
       rightArry.push(currentItem);
     }
   }
 
-  return quickSort(leftArry).concat(middleArry, quickSort(rightArry));
+  return quickSort(leftArry).concat(pivot, quickSort(rightArry));
 };
 
 console.log('quickSort1', quickSort(arr));
@@ -73,5 +70,5 @@ const quickSort2 = (array, start, end) => {
 }
 
 
-quickSort2(arr, 0, arr.length - 1)
-console.log('quickSort2', arr)
+// quickSort2(arr, 0, arr.length - 1)
+// console.log('quickSort2', arr)

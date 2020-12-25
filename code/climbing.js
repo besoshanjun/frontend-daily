@@ -1,5 +1,4 @@
 // 爬楼梯总共有多少种方法 每次可以爬 1或2阶（类似斐波那契数列 ）
-
 const climbing = (n) => {
   if (n < 3 && n >= 1) return 1;
   if (n === 3) return 2;
@@ -9,6 +8,7 @@ const climbing = (n) => {
 
 // console.log("climbing: ", climbing(5));
 
+// 投票
 const find = (array) => {
   let count = 0;
   let result = null;
