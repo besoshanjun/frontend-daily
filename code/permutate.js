@@ -46,8 +46,8 @@ const arrange = (list, pointer, preResult) => {
     arrange(list, pointer + 1, preResult + list[pointer][i])
   }
 }
-// arrange(arr, 0, '');
-console.log('arrange', arrange(arr, 0, ''));
+arrange(arr, 0, '');
+// console.log('arrange', arrange(arr, 0, ''));
 
 // 1234，全排列
 const str = "123";
@@ -68,5 +68,5 @@ const sortAll = (str) => {
   }
 };
 
-console.log('sortAll', sortAll(str))
+// console.log('sortAll', sortAll(str))
 
