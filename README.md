@@ -10,7 +10,8 @@
   - apply
   - call
   - new
-  - limit-load 控制并发数
+  - limit-load 控制并发数 for 循环实现
+  - limit-load2 控制并发数 reduce版本
   - HumpNamed 下划线命名转驼峰命名
 
 ### 算法总结
