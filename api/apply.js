@@ -5,7 +5,7 @@ Function.prototype.myApply = function(context) {
   if(!context) {
     context = window
   }
-  // 如果担心context上原来就有fn，害怕被覆盖，可以使用es6 Sybmol()来保证键的唯一，或者使用Math.random() 生成一个唯一键
+  // 如果担心context上原来就有fn，害怕被覆盖，可以使用es6 Symbol()来保证键的唯一，或者使用Math.random() 生成一个唯一键
   context.fn = this;
   let args = arguments[1];
   let result;

@@ -23,20 +23,6 @@ const insertsSort = (array) => {
 console.log('insertsSort', insertsSort(arr))
 
 var insert = (arr) => {
-  // let length = arr.length;
-  // let preIndex;
-  // let current;
-
-  // for (let i = 0; i < length; i++) {
-  //   current = arr[i];
-  //   preIndex = i - 1;
-  //   while(preIndex >= 0 && arr[preIndex] > current) {
-  //     arr[preIndex + 1] = arr[preIndex];
-  //     preIndex--;
-  //   }
-  //   arr[preIndex + 1] = current
-  // }
-  // return arr
   for (let i = 0; i < arr.length; i++) {
     const current = arr[i];
     let j = i;

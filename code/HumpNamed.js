@@ -7,13 +7,15 @@ function convert(jsonObj) {
       if (oldObj.hasOwnProperty(key)) {
         const value = oldObj[key];
         const r = key.replace(reg, (m) => {
-          return m.substr(1).toUpperCase();
+          return m.substring(1).toUpperCase();
         })
         obj[r] = value;
         if(Array.isArray(value)) {
+          const arr = []
           for (const currentObj of value) {
-            walk(currentObj)
+            arr.push(walk(currentObj))
           }
+          obj[r] = arr
         }
         return obj
       }
