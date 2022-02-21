@@ -17,6 +17,7 @@ function limitLoad(urls, loadImage, limit) {
     prevPromise.then(() => Promise.race(promiseArray))
     .catch(error => console.log(error))
     .then(index => {
+      console.log('index: ', index); //! dhj test
       // 将index对应的Promise替换掉, 然后继续执行promiseArray
       promiseArray[index] = loadImage(url,index)
     })

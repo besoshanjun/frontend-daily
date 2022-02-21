@@ -14,7 +14,7 @@ function test(str = "", obj) {
   Object.keys(obj).forEach(key => {
     _s = _s.replace(/\{\{(\w*|\p{sc=Han})\}\}/u, obj[key]);
   })
-  console.log(_s);
+  console.log('_s',_s);
 }
 
 //2.

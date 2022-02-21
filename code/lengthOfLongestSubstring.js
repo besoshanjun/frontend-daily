@@ -1,4 +1,7 @@
-let string = "abbcabc";
+/**
+ * @description 获取最长子字符串的长度
+ */
+let string = "abbcabcd";
 
 const lengthOfLongestSubstring = (str) => {
   let result = 0;
