@@ -1,0 +1,22 @@
+// 去除代码中的 console.log
+// ast
+
+const parser = require('@babel/parser');
+const traverse = require('@babel/traverse').default;
+const generator = require('@babel/generator');
+const t = require('@babel/types');
+
+module.exports = function (source) {
+  console.log('source: ', source);
+  const ast = parser(source, { sourceType: 'module' });
+  traverse(ast, {
+    CallExpression(path) {
+      if (t.isMemberExpression(path.node.callee) && t.isIdentifier(path.node.callee.object, { name: 'console' })) {
+        path.remove();
+      }
+    },
+  });
+
+  const output = generator(ast, {}, source);
+  return output.code;
+};
