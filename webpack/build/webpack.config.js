@@ -12,6 +12,9 @@ module.exports = {
     path: path.join(__dirname, '../dist'),
     clean: true,
   },
+  devServer: {
+    port: 3003,
+  },
   watch: true,
   module: {
     rules: [

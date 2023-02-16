@@ -16,7 +16,7 @@ function test() {
   });
 }
 
-async function main() {
+export default async function main() {
   const result = await test();
   console.log('result: ', result);
 }
